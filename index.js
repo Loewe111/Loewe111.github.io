@@ -73,9 +73,11 @@ document.addEventListener('mousemove', function (e) {
   ball = document.getElementById('ball');
   ball.classList.remove('hidden');
   width = ball.offsetWidth/2;
-  hieght = ball.offsetHeight/2;
-  ball.style.left = `${e.pageX-width}px`;
-  ball.style.top = `${e.pageY-hieght}px`;
+  height = ball.offsetHeight/2;
+  ball.animate(
+    [{left: `${e.pageX-width}px`, top: `${e.pageY-height}px`}],
+    {duration: 1500, fill: 'forwards'}
+  );
   clearTimeout(timerID);
   timerID = setTimeout(flashDivs, 5000);
 });
