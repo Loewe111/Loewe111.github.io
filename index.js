@@ -31,7 +31,7 @@ function scrollUp() {
 function flashDivs() {
   let divs;
   if(currentSite == 0){
-    divs = document.querySelectorAll('#main div.container');
+    divs = document.querySelectorAll('#languages p');
   }
   else if(currentSite == 1){
     divs = document.querySelectorAll('#projects div.container');
