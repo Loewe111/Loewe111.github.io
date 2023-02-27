@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loewe_111</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="theme.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <div id="ball" class="hidden"></div>
+  <main>
+    <div id="main">
+      <div class="container min-content red">
+        <img class="pfp" src="https://avatars.githubusercontent.com/u/78087018?v=4">
+        <h1>Loewe_111</h1>
+        <a class="black" href="https://github.com/Loewe111">Github</a>
+        <a class="black" href="https://discord.com/users/522657301039939585">Discord</a>
+      </div>
+      <div class="container purple">
+        <h1>About Me</h1>
+        <p> I am a 14 year old student from Germany. 🇩🇪 I am interested in programming, electronics, and robotics. I am currently working on a few projects:</p>
+        <ul>
+          <li>Making my DIY lasertag project called "LoeweTag"</li>
+          <li>Light shows (DMX/ArtNet)</li>
+          <li>Image recogntition/processing (Kinect, etc.)</li>
+          <li>VR Tech</li>
+          <li>Web Design</li>
+          <li>Modded Minecraft</li>
+        </ul>
+      </div>
+    </div>
+    <div id="projects">
+      <h1>Projects</h1>
+      <div class="grid">
+        <div class="container green">
+          <h2>LoeweTag</h2>
+          <p>My DIY lasertag project. It is based on the ESP32 and ESP8266 platform and uses a custom PCB. It is currently in development.</p>
+          <a class="center green" href="https://github.com/Loewe111/LoeweTag-Server">Github</a>
+          <a class="center green" href="https://github.com/Loewe111/LoeweTag-Server/wiki">Wiki</a>
+        </div>
+        <div class="container cyan">
+          <h2>LoeweTag Gamemodes</h2>
+          <p>A Store like system, where you can easily download more gamemodes. Submit your own gamemodes with a Pull Request!</p>
+          <a class="center cyan" href="https://github.com/Loewe111/loeweTag-gamemodes">Github</a>
+          <a class="center cyan" href="https://loewe111.github.io/loeweTag-gamemodes/">Website</a>
+        </div>
+        <div class="container blue">
+          <h2>PxMatrix Glediator</h2>
+          <p>Control a HUB75 LED matrix with Glediator. It is based on the PxMatrix library and uses the ESP32 platform.</p>
+          <a class="center blue" href="https://github.com/Loewe111/PxMatrix-Glediator">Github</a>
+        </div>
+        <div class="container purple">
+          <h2>ccMIDIconvert</h2>
+          <p>A MIDI to ccMIDI converter. ccMIDI is a file format that stores midi data in plain text, useful for the ComputerCraft mod.</p>
+          <a class="center purple" href="https://github.com/Loewe111/ccmidiconvert">Github</a>
+        </div>
+      </div>
+    </div>
+    <button class="material-symbols-rounded scroll-button down" onclick="scrollDown()">expand_more</button>
+    <button class="material-symbols-rounded scroll-button up" onclick="scrollUp()">expand_less</button>
+  </main>
+</body>
+</html>
