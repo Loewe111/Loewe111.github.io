@@ -19,18 +19,19 @@ main {
 
 #main, #projects {
   font-family: 'Asap', 'Varela Round', "Arial", monospace;
-  overflow-y: scroll;
   color: var(--light);
   height: 100vh;
-  width: 100vw;
+  
   backdrop-filter: blur(20rem);
 }
 
+main::-webkit-scrollbar {
+  width: 0px;
+}
+
 #main {
-  display: flex;
-  flex-direction: row;
-  align-items: left;
-  justify-content: left;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
 }
 
 .grid {
@@ -123,6 +124,10 @@ a.center {
   cursor: pointer;
 }
 
+.scroll-button:hover {
+  background-color: #00000050;
+}
+
 .scroll-button.down {
   bottom: 2rem;
   right: 2rem;
@@ -156,4 +161,10 @@ a.center {
   background-color: var(--color);
   color: var(--dark);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.subtext {
+  font-size: 0.75rem;
+  text-align: center;
+  color: #aaa;
 }
