@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@700&family=Varela+Round&display=swap');
+
+:root {
+  --color-bg: #141f23;
+  --color-fg: #202f36;
+  --color-text: #fff;
+  --color-subtext: #b3b3b3;
+  
+  --color-green: #58cc02;
+  --color-green-accent: #58a700;
+  --color-red: #cc0202;
+  --color-red-accent: #a70000;
+  --color-yellow: #cc9f02;
+  --color-yellow-accent: #a77a00;
+  --color-blue: #02a7cc;
+  --color-blue-accent: #007aa7;
+  --color-purple: #9f02cc;
+  --color-purple-accent: #7a00a7;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Asap', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0.5rem;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 0.5rem;
+  grid-template-areas: 
+  'me languages'
+  'me projects'
+  'links projects';
+}
+
+.container {
+  background-color: var(--color-fg);
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 1rem;
+}
+
+.pfp {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.subtext {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-subtext);
+}
+
+button, a {
+  display: inline-block;
+  background-color: var(--color-green);
+  color: var(--color-text);
+  min-width: 5rem;
+  font-family: 'Varela Round', monospace, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--color-green-accent) 0px 0.3rem;
+  transition: 0.2s;
+  margin-bottom: 0.3rem;
+  transform: translateY(0);
+}
+
+button:hover, a:hover {
+  box-shadow: var(--color-green-accent) 0px 0.2rem;
+  transform: translateY(0.1rem);
+}
+
+button:active, a:active {
+  box-shadow: var(--color-green-accent) 0px 0rem;
+  transform: translateY(0.3rem);
+}
+
+#me {
+  grid-area: me;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#languages {
+  grid-area: languages;
+}
+
+#projects {
+  grid-area: projects;
+  overflow-y: scroll;
+  border-radius: 1rem;
+}
+
+#projects h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0px;
+}
+
+#links {
+  grid-area: links;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#languages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#languages-list * {
+  min-width: 4rem;
+  padding: 0.5rem;
+  margin: 0.2rem 0;
+  border-radius: 0.5rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Varela Round', monospace, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  transition: 0.2s;
+}
+
+/* mobile */
+@media only screen and (max-width: 600px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'me'
+    'languages'
+    'links'
+    'projects';
+  }
+  #projects {
+    height: max-content;
+  }
+}
