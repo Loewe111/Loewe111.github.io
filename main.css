@@ -24,8 +24,8 @@ body {
   font-family: 'Asap', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  margin: 0 0.5rem;
-  height: 100vh;
+  margin: 0.5rem;
+  height: calc(100vh - 1rem);
 
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -39,7 +39,7 @@ body {
 .container {
   background-color: var(--color-fg);
   padding: 1rem;
-  margin: 0.5rem 0;
+  margin: 0 0;
   border-radius: 1rem;
 }
 
@@ -102,6 +102,10 @@ button:active, a:active {
   grid-area: projects;
   overflow-y: scroll;
   border-radius: 1rem;
+}
+
+#projects .container {
+  margin: 0.5rem 0 0 0;
 }
 
 #projects h1 {
