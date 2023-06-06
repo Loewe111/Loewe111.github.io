@@ -43,6 +43,10 @@ body {
   border-radius: 1rem;
 }
 
+#projects .container img {
+  height: 5rem;
+}
+
 .pfp {
   width: 10rem;
   height: 10rem;
@@ -101,7 +105,7 @@ button:active, a:active {
 #projects {
   grid-area: projects;
   overflow-y: scroll;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
 }
 
 #projects .container {
